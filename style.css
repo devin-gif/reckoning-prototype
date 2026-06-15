@@ -4,17 +4,22 @@
    ============================================= */
 
 :root {
-  --navy:     #0D1B2E;
-  --navy-mid: #162640;
+  --navy:     #761113;
+  --navy-mid: #5a0d10;
   --gold:     #C9A227;
   --gold-light: #E0B84A;
-  --parchment:#F5F0E6;
-  --cream:    #FAF8F3;
-  --charcoal: #1E1E1E;
+  --parchment:#D9CBC7;
+  --cream:    #e8dedd;
+  --charcoal: #26291D;
   --gray:     #5A5A5A;
   --gray-light: #888;
   --white:    #ffffff;
-  --museum-bg: #1A2A1A;
+  --museum-bg: #26291D;
+
+  /* New palette */
+  --wine:     #761113;
+  --forest:   #26291D;
+  --dust:     #D9CBC7;
 
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans:  'Inter', system-ui, sans-serif;
@@ -528,9 +533,49 @@ strong { font-weight: 600; }
   .hist-figure--wide { grid-column: 1; }
 }
 
+/* ── Design Assets ──────────────────────────── */
+
+/* Hero logo: black lines inverted to white on wine background */
+.hero-logo-img {
+  display: block;
+  max-width: 560px;
+  width: 88%;
+  margin: 0 auto 16px;
+  filter: invert(1);
+}
+
+/* Horizontal ornament used as a section divider */
+.section-ornament {
+  text-align: center;
+  padding-bottom: 52px;
+}
+.section-ornament img {
+  max-width: 420px;
+  width: 68%;
+}
+/* On dark sections, invert ornament lines to white */
+.section--dark .section-ornament img {
+  filter: invert(1);
+}
+
+/* "JOIN THE REGIMENT" heading image in RSVP */
+.regiment-img {
+  display: block;
+  max-width: 500px;
+  width: 90%;
+  margin: 0 auto 12px;
+}
+
+/* Vertical ornament in partner divider */
+.partner-divider-orn {
+  width: 56px;
+  display: block;
+  margin: 0 auto;
+}
+
 /* ── Faces of Freedom ───────────────────────── */
 .section--faces {
-  background: #0a1520;
+  background: var(--navy);
   color: var(--white);
 }
 
@@ -633,7 +678,7 @@ strong { font-weight: 600; }
 
 /* ── André Cailloux Center Spotlight ───────── */
 .section--center-spotlight {
-  background: #0e2218;
+  background: var(--forest);
   color: var(--white);
 }
 
@@ -1229,7 +1274,7 @@ strong { font-weight: 600; }
 
 /* ── Footer ─────────────────────────────────── */
 #footer {
-  background: #060f1a;
+  background: var(--navy-mid);
   color: rgba(255,255,255,0.6);
   padding-top: 64px;
 }
