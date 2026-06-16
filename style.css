@@ -852,6 +852,13 @@ strong { font-weight: 600; }
   opacity: 0.85;
 }
 
+.discovery-link {
+  color: var(--navy);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.discovery-link:hover { opacity: 0.75; }
+
 .discovery-credit {
   margin-top: 28px !important;
   padding: 16px 20px;
