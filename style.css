@@ -533,6 +533,24 @@ strong { font-weight: 600; }
   .hist-figure--wide { grid-column: 1; }
 }
 
+/* ── ACC Logos ──────────────────────────────── */
+
+/* Full logo in partner card (parchment background) */
+.partner-logo-img {
+  display: block;
+  max-width: 280px;
+  width: 100%;
+  margin: 0 0 20px;
+}
+
+/* Icon in the Cailloux Center section header (dark background) */
+.acc-section-icon {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 16px;
+}
+
 /* ── Design Assets ──────────────────────────── */
 
 /* Hero logo: black lines inverted to white on wine background */
