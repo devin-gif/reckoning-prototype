@@ -533,6 +533,18 @@ strong { font-weight: 600; }
   .hist-figure--wide { grid-column: 1; }
 }
 
+/* ── History in-text divider ────────────────── */
+.history-divider {
+  text-align: center;
+  margin: 36px 0;
+}
+.history-divider img {
+  max-width: 320px;
+  width: 80%;
+  filter: invert(1);
+  opacity: 0.6;
+}
+
 /* ── ACC Logos ──────────────────────────────── */
 
 /* Full logo in partner card (parchment background) */
