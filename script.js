@@ -94,6 +94,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ── Fade-in on scroll ─────────────────────────
+const style = document.createElement('style');
+style.textContent = `
+  .fade-in { opacity: 0; transform: translateY(22px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .fade-in.visible { opacity: 1; transform: none; }
+`;
+document.head.appendChild(style);
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -101,17 +108,39 @@ const observer = new IntersectionObserver((entries) => {
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.12 });
+}, { threshold: 0.1 });
 
-document.querySelectorAll('.history-card, .element-card, .partner-card, .center-info-card, .center-donate-block, .funding-half').forEach(el => {
+// Cards
+document.querySelectorAll('.history-card, .partner-card, .center-info-card, .hist-figure').forEach(el => {
   el.classList.add('fade-in');
   observer.observe(el);
 });
 
-// Add fade-in CSS via JS so it degrades gracefully if JS is off
-const style = document.createElement('style');
-style.textContent = `
-  .fade-in { opacity: 0; transform: translateY(18px); transition: opacity 0.5s ease, transform 0.5s ease; }
-  .fade-in.visible { opacity: 1; transform: none; }
-`;
-document.head.appendChild(style);
+// Section headings and intros
+document.querySelectorAll('.section-eyebrow, .section-title, .section-intro, .pull-quote, .hero-logo-img, .history-lead').forEach(el => {
+  el.classList.add('fade-in');
+  observer.observe(el);
+});
+
+// Stagger history timeline cards
+document.querySelectorAll('.history-card').forEach((card, i) => {
+  card.style.transitionDelay = `${i * 0.07}s`;
+});
+
+// ── Sticky RSVP button ────────────────────────
+const stickyRsvp = document.getElementById('stickyRsvp');
+const heroEl     = document.getElementById('hero');
+const rsvpEl     = document.getElementById('rsvp');
+
+// Show after hero leaves view
+const heroWatcher = new IntersectionObserver(([entry]) => {
+  stickyRsvp?.classList.toggle('visible', !entry.isIntersecting);
+}, { threshold: 0 });
+
+// Hide when RSVP section is visible
+const rsvpWatcher = new IntersectionObserver(([entry]) => {
+  if (entry.isIntersecting) stickyRsvp?.classList.remove('visible');
+}, { threshold: 0.3 });
+
+if (heroEl) heroWatcher.observe(heroEl);
+if (rsvpEl) rsvpWatcher.observe(rsvpEl);
