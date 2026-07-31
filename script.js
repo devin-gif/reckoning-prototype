@@ -2,6 +2,15 @@
    RECKONING & REMEMBRANCE — script.js
    ============================================= */
 
+// ── Rotating pull quote (random per visit) ────
+(function () {
+  const quotes = document.querySelectorAll('.pull-quote-section [data-quote]');
+  if (quotes.length > 1) {
+    const pick = Math.floor(Math.random() * quotes.length);
+    quotes.forEach((q, i) => { q.style.display = i === pick ? '' : 'none'; });
+  }
+})();
+
 // ── Scrolled nav ──────────────────────────────
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
