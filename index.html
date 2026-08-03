@@ -47,7 +47,7 @@
         <div class="hero-date-divider"></div>
         <div class="hero-date-item">
           <span class="hero-date-label">Time</span>
-          <span class="hero-date-value">11:00 AM – 3:00 PM</span>
+          <span class="hero-date-value">10:00 AM – 3:00 PM</span>
         </div>
         <div class="hero-date-divider"></div>
         <div class="hero-date-item">
@@ -198,7 +198,7 @@
   <!-- PROCESSION -->
   <section class="section section--dark" id="procession">
     <div class="container">
-      <p class="section-eyebrow eyebrow--gold">November 14 · 11 AM – 3 PM</p>
+      <p class="section-eyebrow eyebrow--gold">November 14 · 10 AM – 3 PM</p>
       <h2 class="section-title section-title--light">The Procession</h2>
       <p class="section-intro section-intro--light">This is not a march in a traditional sense. It is a ritual. A living ceremony — to bring together the community and rededicate the public memory of our city.</p>
       <p class="section-intro section-intro--light">Most importantly, this is an opportunity for community to come together. To honor those brave New Orleanians who joined to fight slavery and racism. Honor America's 250th anniversary remembering this history with us.</p>
@@ -286,7 +286,7 @@
   <!-- RSVP -->
   <section class="section section--parchment" id="rsvp">
     <div class="container container--narrow">
-      <p class="section-eyebrow eyebrow--navy">November 14, 2026 · 11 AM</p>
+      <p class="section-eyebrow eyebrow--navy">November 14, 2026 · 10 AM</p>
       <img src="images/join-the-regiment.png" alt="Join the Regiment" class="regiment-img" />
       <h2 class="section-title">March With Us</h2>
       <p class="section-intro">The procession is free and open to all. RSVP below so we can keep you informed — gathering details, what to wear, and everything you need to know before November 14.</p>
@@ -382,17 +382,32 @@
       <p class="section-intro">Questions about the procession, partnership opportunities, or press inquiries — we'd love to hear from you.</p>
 
       <!-- ═══════════════════════════════════════════════════════════
-           FORMSPREE CONTACT FORM
-           To activate: create a free account at formspree.io,
-           create a new form, and replace XXXXXXXX below with
-           your form ID. Submissions will be sent to
-           beans@kreweofredbeans.org.
+           CONTACT FORM — delivered by FormSubmit.co (no account needed)
+           Messages are emailed to beans@kreweofredbeans.org.
+
+           ►► ONE-TIME ACTIVATION: the very first time this form is
+              submitted, FormSubmit emails a confirmation link to
+              beans@kreweofredbeans.org. Open that email and click
+              "Activate Form" once — after that, every message is
+              delivered automatically.
+
+           To also reach info@accneworleans.com, set an auto-forward
+           rule on the beans@ inbox (or add a hidden field:
+           <input type="hidden" name="_cc" value="info@accneworleans.com" />).
       ═══════════════════════════════════════════════════════════ -->
       <div class="rsvp-form-wrap">
       <form
-        action="https://formspree.io/f/XXXXXXXX"
+        action="https://formsubmit.co/beans@kreweofredbeans.org"
         method="POST"
         class="rsvp-form">
+
+        <!-- FormSubmit settings -->
+        <input type="hidden" name="_subject" value="New message from caillouxprocession.com" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="https://caillouxprocession.com/thanks.html" />
+        <!-- Honeypot: bots fill this in, humans never see it -->
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
 
         <div class="form-row">
           <div class="form-group">
