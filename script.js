@@ -35,60 +35,9 @@ links?.querySelectorAll('a').forEach(link => {
 });
 
 // ── RSVP / Mailchimp Form ─────────────────────
-// The form posts to Mailchimp via target="_blank".
-// We add client-side validation before allowing submission,
-// and show a thank-you panel after the Mailchimp tab opens.
-const form    = document.getElementById('mc-embedded-subscribe-form');
-const success = document.getElementById('rsvpSuccess');
-
-form?.addEventListener('submit', (e) => {
-  const required = form.querySelectorAll('[required]');
-  let valid = true;
-
-  required.forEach(field => {
-    field.style.borderColor = '';
-    if (!field.value.trim()) {
-      field.style.borderColor = '#c0392b';
-      field.focus();
-      valid = false;
-    }
-  });
-
-  if (!valid) {
-    e.preventDefault();
-    return;
-  }
-
-  // Mailchimp opens in a new tab; show local thank-you after a moment
-  setTimeout(() => {
-    form.style.display = 'none';
-    success.style.display = 'block';
-    success.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }, 800);
-});
-
-// ── Share button ──────────────────────────────
-const shareBtn = document.getElementById('shareBtn');
-
-shareBtn?.addEventListener('click', async () => {
-  const shareData = {
-    title: 'Reckoning & Remembrance',
-    text: 'Join the Captain André Cailloux Community Procession in New Orleans — November 13.',
-    url: window.location.href,
-  };
-
-  if (navigator.share) {
-    try {
-      await navigator.share(shareData);
-    } catch (_) { /* user cancelled */ }
-  } else {
-    // Fallback: copy link
-    navigator.clipboard.writeText(window.location.href).then(() => {
-      shareBtn.textContent = 'Link copied!';
-      setTimeout(() => { shareBtn.textContent = 'Share This Page'; }, 2500);
-    });
-  }
-});
+// The "March With Us" form is Mailchimp's official embed; validation and
+// submission are handled by Mailchimp's mc-validate.js / mc-sms-phone.js
+// (loaded next to the form), so no custom handler is needed here.
 
 // ── Smooth anchor offset for fixed nav ────────
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

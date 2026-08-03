@@ -1478,3 +1478,26 @@ strong { font-weight: 600; }
 @media (max-width: 480px) {
   .sticky-rsvp { bottom: 16px; right: 16px; padding: 11px 18px; font-size: 0.82rem; }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   Mailchimp embedded RSVP form — blended with site styling
+   ═══════════════════════════════════════════════════════════ */
+#mc_embed_signup { background: transparent !important; width: 100% !important; max-width: 100% !important; font-family: inherit !important; color: inherit; clear: none !important; }
+#mc_embed_signup h2 { display: none; }                 /* redundant with the "March With Us" section title */
+#mc_embed_signup .indicates-required { text-align: right; font-size: 0.8rem; opacity: 0.65; margin-bottom: 14px; }
+#mc_embed_signup .asterisk { color: var(--wine); }
+#mc_embed_signup .mc-field-group { margin-bottom: 18px; }
+#mc_embed_signup .mc-field-group > label { display: block; font-weight: 600; margin-bottom: 6px; font-size: 0.95rem; color: var(--charcoal); }
+#mc_embed_signup input[type="email"],
+#mc_embed_signup input[type="text"] { width: 100%; padding: 12px 14px; border: 1px solid #b7bcbf; border-radius: 6px; font: inherit; box-sizing: border-box; background: var(--white); color: var(--charcoal); }
+#mc_embed_signup input[type="email"]:focus,
+#mc_embed_signup input[type="text"]:focus { outline: none; border-color: var(--wine); }
+#mc_embed_signup .mc-sms-phone-group { display: flex; gap: 8px; margin-top: 8px; font-size: 0.78rem; line-height: 1.45; opacity: 0.85; }
+#mc_embed_signup .mc-sms-phone-group input[type="checkbox"] { margin-top: 3px; }
+#mc_embed_signup .mc-sms-phone-group a { text-decoration: underline; }
+#mc_embed_signup #mce-responses { margin: 10px 0 0; }
+#mc_embed_signup #mce-responses .response { font-size: 0.9rem; padding: 6px 0; }
+#mc_embed_signup #mce-error-response { color: var(--wine); }
+#mc_embed_signup .clear { clear: both; }
+#mc_embed_signup input.button { margin-top: 10px; }
+#mc_embed_signup .form-note { font-size: 0.8rem; opacity: 0.7; margin-top: 12px; text-align: center; }

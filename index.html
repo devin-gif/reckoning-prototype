@@ -296,68 +296,51 @@
       <div class="rsvp-form-wrap">
 
         <!-- ═══════════════════════════════════════════════════════════
-             MAILCHIMP EMBEDDED FORM
-             To activate: replace the action URL below with your
-             Mailchimp list's embed URL (Audience → Signup forms →
-             Embedded forms → copy the action="..." value).
-             Phone is a standard Mailchimp merge field (PHONE).
+             MAILCHIMP EMBEDDED FORM — feedthesecondline audience (us19)
+             Official Mailchimp embed. Requires Email + SMS phone number
+             with marketing consent; First/Last name optional. Sign-ups
+             are tagged 24265120. Validation via Mailchimp's own
+             mc-validate.js + mc-sms-phone.js. Visual styling is blended
+             with the site via #mc_embed_signup rules in style.css.
         ═══════════════════════════════════════════════════════════ -->
-        <form
-          action="https://YOUR-LIST.us1.list-manage.com/subscribe/post?u=XXXXXXXXXXXXXXXXXXXXXXXX&amp;id=XXXXXXXXXX"
-          method="post"
-          id="mc-embedded-subscribe-form"
-          name="mc-embedded-subscribe-form"
-          class="rsvp-form"
-          target="_blank"
-          novalidate>
-
-          <!-- Bot-trap (required by Mailchimp — do not remove) -->
-          <div style="position:absolute;left:-5000px;" aria-hidden="true">
-            <input type="text" name="b_XXXXXXXXXXXXXXXXXXXXXXXX_XXXXXXXXXX" tabindex="-1" value="" />
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="mce-FNAME">First Name <span class="form-required">*</span></label>
-              <input type="text" id="mce-FNAME" name="FNAME" placeholder="Your first name" required />
+        <div id="mc_embed_signup">
+          <form action="https://feedthesecondline.us19.list-manage.com/subscribe/post?u=180905c2a2dba8e9ec6bac318&amp;id=b934ba5015&amp;f_id=00fb6ce7f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+            <div id="mc_embed_signup_scroll">
+              <h2>Join the Procession</h2>
+              <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+              <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""></div>
+              <div class="mc-field-group"><label for="mce-SMSPHONE">SMS Phone Number <span class="asterisk">*</span></label><div class="" style="display: flex; border: 1px solid rgb(171, 176, 178);"><div style="display: flex;"><span style="padding-left: 0px; padding-right: 4px; align-self: center;"><div style="display: flex; align-content: flex-start; align-items: center; gap: 10px;"><div id="flag-display-SMSPHONE" style="display: flex; align-items: center; gap: 4px; cursor: pointer; padding-left: 8px; position: relative;"><span id="flag-emoji-SMSPHONE">🇺🇸</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none"><path d="M8.0096 11.5649C7.9219 11.5649 7.83506 11.5476 7.75407 11.5139C7.67307 11.4803 7.59951 11.431 7.5376 11.3689L3.54293 7.36289C3.48099 7.30091 3.43186 7.22733 3.39836 7.14636C3.36485 7.06539 3.34763 6.97862 3.34766 6.89099C3.34769 6.80336 3.36498 6.7166 3.39854 6.63565C3.4321 6.55471 3.48128 6.48117 3.54326 6.41923C3.60525 6.35729 3.67882 6.30816 3.75979 6.27466C3.84076 6.24115 3.92754 6.22392 4.01517 6.22395C4.10279 6.22398 4.18956 6.24127 4.2705 6.27484C4.35145 6.3084 4.42499 6.35758 4.48693 6.41956L8.01093 9.95289L11.5443 6.42956C11.6694 6.30464 11.8391 6.23457 12.016 6.23476C12.1928 6.23495 12.3623 6.30538 12.4873 6.43056C12.6122 6.55574 12.6823 6.72542 12.6821 6.90227C12.6819 7.07911 12.6114 7.24864 12.4863 7.37356L8.48026 11.3702C8.35532 11.4949 8.18607 11.5649 8.0096 11.5649Z" fill="#21262A"></path></svg><select id="country-select-SMSPHONE" name="SMSPHONE[country]" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; opacity: 0; cursor: pointer; z-index: 10; border: medium; background: none; font-size: 0px; margin: 0px; padding: 0px; min-width: auto; max-width: none;"><option value="US" selected="">US+1</option></select></div></div></span></div><input type="text" name="SMSPHONE" class="REQ_CSS" id="mce-SMSPHONE" placeholder="+1 000 000 0000" value="+1 " style="border: medium;"></div><div class="mc-sms-phone-group"><div><input type="checkbox" name="mc-SMSPHONE-ack" id="mc-SMSPHONE-ack" value="true"></div><div class="small-meta"><div id="legal-text-SMSPHONE"><div>Krewe of Red Beans - By providing your phone number and checking the box, you agree to receive promotional and marketing messages, donation solicitations, notifications, and customer service communications from Krewe of Red Beans. Message and data rates may apply. Consent is not a condition of purchase. Message frequency varies. Text HELP for help. Text STOP to cancel. <a target="_blank" href="http://eepurl.com/jusw9-" rel="noopener noreferrer">See terms</a>, <a target="_blank" href="http://eepurl.com/jusw7w" rel="noopener noreferrer">See Privacy Policy</a></div></div></div></div></div>
+              <div class="mc-field-group"><label for="mce-FNAME">First Name </label><input type="text" name="FNAME" class=" text" id="mce-FNAME" value=""></div>
+              <div class="mc-field-group"><label for="mce-LNAME">Last Name </label><input type="text" name="LNAME" class=" text" id="mce-LNAME" value=""></div>
+              <div hidden=""><input type="hidden" name="tags" value="24265120"></div>
+              <div id="mce-responses" class="clear">
+                <div class="response" id="mce-error-response" style="display: none;"></div>
+                <div class="response" id="mce-success-response" style="display: none;"></div>
+              </div>
+              <div aria-hidden="true" style="position: absolute; left: -5000px;"><input type="text" name="b_180905c2a2dba8e9ec6bac318_b934ba5015" tabindex="-1" value=""></div>
+              <div class="clear"><input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-navy btn--full btn--large" value="Reserve My Place in the Procession"></div>
+              <p class="form-note">We'll never share your information. You'll hear from us when it matters.</p>
             </div>
-            <div class="form-group">
-              <label for="mce-LNAME">Last Name <span class="form-required">*</span></label>
-              <input type="text" id="mce-LNAME" name="LNAME" placeholder="Your last name" required />
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="mce-EMAIL">Email Address <span class="form-required">*</span></label>
-            <input type="email" id="mce-EMAIL" name="EMAIL" placeholder="you@example.com" required />
-          </div>
-
-          <div class="form-group">
-            <label for="mce-PHONE">Phone Number <span class="form-optional">(optional — for day-of updates)</span></label>
-            <input type="tel" id="mce-PHONE" name="PHONE" placeholder="(504) 555-0100" />
-          </div>
-
-          <div class="form-group form-group--check">
-            <label class="check-label">
-              <input type="checkbox" name="group[1][1]" value="1" checked />
-              <span>Keep me updated about the procession</span>
-            </label>
-          </div>
-
-          <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-navy btn--full btn--large">
-            Reserve My Place in the Procession
-          </button>
-          <p class="form-note form-note--required"><span class="form-required">*</span> Required field</p>
-          <p class="form-note">We'll never share your information. You'll hear from us when it matters.</p>
-        </form>
-
-        <div class="rsvp-success" id="rsvpSuccess" style="display:none;">
-          <div class="success-icon">✓</div>
-          <h3>You're on the list.</h3>
-          <p>Thank you for joining us. We'll be in touch as November 14 approaches with everything you need to know — where to gather, what to wear, and how to prepare for the day.</p>
-          <p>In the meantime, consider sharing this page with someone who should know this history.</p>
-          <button class="btn btn-navy" id="shareBtn">Share This Page</button>
+          </form>
         </div>
+        <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+        <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-sms-phone.js"></script>
+        <script type="text/javascript">
+          (function($) {
+            window.fnames = new Array(); window.ftypes = new Array();
+            fnames[0]='EMAIL';   ftypes[0]='email';
+            fnames[13]='SMSPHONE'; ftypes[13]='smsphone';
+            fnames[1]='FNAME';   ftypes[1]='text';
+            fnames[2]='LNAME';   ftypes[2]='text';
+          }(jQuery));
+          var $mcj = jQuery.noConflict(true);
+          if (!window.MC) { window.MC = {}; }
+          window.MC.smsPhoneData = {
+            defaultCountryCode: 'US',
+            programs: [{"countryCode":"US","countryCallingCode":"+1","number":"+15044149706","imgSrc":"https://flagcdn.com/w40/us.png","requiredTemplate":"Krewe of Red Beans - By providing your phone number and checking the box, you agree to receive promotional and marketing messages, donation solicitations, notifications, and customer service communications from Krewe of Red Beans. Message and data rates may apply. Consent is not a condition of purchase. Message frequency varies. Text HELP for help. Text STOP to cancel. <a href=\"http://eepurl.com/jusw9-\" target=\"_blank\">See terms</a>, <a href=\"http://eepurl.com/jusw7w\" target=\"_blank\">See Privacy Policy</a>","optionalTemplate":"Krewe of Red Beans - By providing your phone number, you agree to receive promotional and marketing messages, donation solicitations, notifications, and customer service communications from Krewe of Red Beans. Message and data rates may apply. Consent is not a condition of purchase. Message frequency varies. Text HELP for help. Text STOP to cancel. <a href=\"http://eepurl.com/jusw9-\" target=\"_blank\">See terms</a>, <a href=\"http://eepurl.com/jusw7w\" target=\"_blank\">See Privacy Policy</a>","language":"en"}],
+            smsProgramDataCountryNames: [{"code":"US","name":"USA"}]
+          };
+        </script>
 
       </div>
     </div>
