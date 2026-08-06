@@ -3,13 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Google Analytics (GA4) -->
+  <!-- Google Analytics (GA4) — consent-gated (no analytics cookies until visitor accepts) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TB7KFX933G"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', { 'analytics_storage': 'denied' });
     gtag('js', new Date());
     gtag('config', 'G-TB7KFX933G');
+    try {
+      if (localStorage.getItem('cookie-consent') === 'accepted') {
+        gtag('consent', 'update', { 'analytics_storage': 'granted' });
+      }
+    } catch (e) {}
   </script>
   <title>Thank You — Reckoning &amp; Remembrance</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,5 +34,6 @@
       <a href="/" class="btn btn-gold" style="margin-top:12px;">Back to the site</a>
     </div>
   </section>
+  <script src="cookie-consent.js"></script>
 </body>
 </html>
