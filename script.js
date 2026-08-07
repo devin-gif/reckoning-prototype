@@ -2,6 +2,23 @@
    RECKONING & REMEMBRANCE — script.js
    ============================================= */
 
+// ── RSVP SMS phone: auto-add +1 so visitors just type their number ──
+// Mailchimp's SMS field needs E.164 (+1XXXXXXXXXX). We normalize whatever
+// the visitor types (e.g. "504-555-0100" or "5045550100") on blur and on
+// submit, using capture phase so it runs before Mailchimp's own validation.
+(function () {
+  var el = document.getElementById('mce-SMSPHONE');
+  if (!el) return;
+  function normalize() {
+    var digits = (el.value || '').replace(/\D/g, '');
+    if (digits.length === 11 && digits.charAt(0) === '1') digits = digits.slice(1);
+    if (digits.length === 10) el.value = '+1' + digits;
+  }
+  el.addEventListener('blur', normalize, true);
+  var form = document.getElementById('mc-embedded-subscribe-form');
+  if (form) form.addEventListener('submit', normalize, true);
+})();
+
 // ── Rotating pull quote (random per visit) ────
 (function () {
   const quotes = document.querySelectorAll('.pull-quote-section [data-quote]');
