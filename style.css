@@ -1532,3 +1532,14 @@ strong { font-weight: 600; }
   .cookie-consent { flex-direction: column; align-items: stretch; text-align: left; }
   .cookie-consent__actions { justify-content: flex-end; }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   The Mural section — copy + teaser video side by side
+   ═══════════════════════════════════════════════════════════ */
+.mural-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; margin-top: 28px; }
+.mural-text p { margin: 0 0 16px; line-height: 1.75; }
+.mural-text .btn { margin-top: 10px; }
+.mural-video { width: 100%; height: auto; border-radius: 10px; box-shadow: 0 12px 40px rgba(0,0,0,0.28); display: block; background: #000; }
+@media (max-width: 820px) {
+  .mural-grid { grid-template-columns: 1fr; gap: 26px; }
+}
